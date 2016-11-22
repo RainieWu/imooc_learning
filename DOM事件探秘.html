@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DOM事件探秘</title>
+<style type="text/css">
+body,ul,li{
+	margin:0;
+	padding:0;
+	font-size:13px;
+}
+
+ul,li{
+	list-style:none;
+}
+
+#divselect{
+	width:186px;
+	margin:80px auto;
+	position:relative;
+	z-index:10000;
+}
+
+#divselect cite{
+	width:150px;
+	height:24px;
+	line-height:24px;
+	display:block;
+	color:#807a62;
+	font-style:normal;
+	padding-left:4px;
+	padding-right:30px;
+	border:1px solid #333333;
+}
+
+#divselect span{
+	color:#807a62;
+	font-weight:bold;
+	position:relative;
+	top:-20px;
+	right:-165px;
+	cursor:pointer;
+}
+
+#divselect ul{
+	width:184px;
+	border:1px solid #333333;
+	background-color:#ffffff;
+	position:absolute;
+	z-index:20000;
+	margin-top:-16px;
+	display:none;
+}
+
+#divselect ul li{
+	height:24px;
+	line-height:24px;
+}
+
+#divselect ul li a{
+	display:block;
+	height:24px;
+	color:#333333;
+	text-decoration:none;
+	padding-left:10px;
+	padding-right:10px;
+}
+</style>
+<script language="javascript" type="text/javascript">
+window.onload=function(){
+	var box=document.getElementById('divselect');
+	var title=box.getElementsByTagName('cite')[0];
+	var option=box.getElementsByTagName('span')[0];
+	var menu=box.getElementsByTagName('ul')[0];
+	var as=box.getElementsByTagName('a');
+	var index=-1;
+	
+	//展开选项
+	option.onclick=function(event){
+		event=event||window.event;
+		event.stopPropagation?event.stopPropagation():event.cancelBubble=true;
+		menu.style.display="block";
+	}
+	
+	//鼠标滑过、离开、点击每个选项
+	for(var i=0;i<as.length;i++){
+		as[i].onmouseover=function(){
+			for(var j=0;j<as.length;j++) as[j].style.background="#FFF";
+			this.style.background="#CCC";
+			index=this.id-1;
+		}
+		as[i].onmouseout=function(){
+			this.style.background="#FFF";
+		}
+		as[i].onclick=function(){
+			title.innerHTML=this.innerHTML;
+			index=-1;
+		}
+	}
+		
+	//点击页面空白处时收起选项
+	document.onclick=function(){
+		menu.style.display="none";
+	}
+	
+	//键盘事件
+	document.onkeyup=function(event){
+		event=event||window.event;
+		//向上键
+		if(event.keyCode==38){
+			index--;
+			if(index<=-1) index=as.length-1;
+			for(var i=0;i<as.length;i++) as[i].style.background="#FFF";
+			as[index].style.background="#CCC";
+			
+		}
+		//向下键
+		if(event.keyCode==40){
+			index++;
+			if(index>=as.length) index=0;
+			for(var i=0;i<as.length;i++) as[i].style.background="#FFF";
+			as[index].style.background="#CCC";
+		}
+		//回车键
+		if(event.keyCode==13){
+			title.innerHTML=as[index].innerHTML;
+			menu.style.display="none";
+		}
+	}
+}
+</script>
+</head>
+
+<body>
+	<div id="divselect">
+    	<cite>请选择分类</cite>
+        <span>∨</span>
+        <ul>
+        	<li id="li"><a href="javascript:;" selectid="1" id="1">ASP开发</a></li>
+            <li><a href="javascript:;" selectid="2" id="2">.NET开发</a></li>
+            <li><a href="javascript:;" selectid="3" id="3">PHP开发</a></li>
+            <li><a href="javascript:;" selectid="4" id="4">Javascript开发</a></li>
+            <li><a href="javascript:;" selectid="5" id="5">Java特效</a></li>
+        </ul>
+    </div>
+</body>
+</html>

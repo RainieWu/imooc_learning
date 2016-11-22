@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	padding-top:51px;
+}
+
+.carousel{
+	background-color:#000;
+	margin-bottom:50px;
+}
+
+.carousel .item{
+	height:500px;
+}
+
+.carousel img{
+	width:100%;
+}
+
+.carousel-caption p{
+	font-size:18px;
+	margin-bottom:100px;
+}
+
+.col-md-4{
+	text-align:center;
+}
+
+.container hr{
+	margin-top:50px;
+	margin-bottom:30px;
+}
+
+.tab-pane{
+	margin-top:40px;
+}
+
+.col-md-7 h2{
+	font-size:40px;
+	color:#2a6496;
+	margin-top:100px;
+}
+
+.col-md-7 span{
+	font-size:24px;
+	color:#999;
+}
+
+.col-md-7 p{
+	font-size:20px;
+}
+
+.col-md-5 img{
+	width:400px;
+}
+
+footer{
+	margin-bottom:80px;
+}

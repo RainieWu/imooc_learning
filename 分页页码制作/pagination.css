@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+#content{
+	text-align:center;
+	font-size:100px;
+}
+
+#page{
+	text-align:center;
+	color:#ff6500;
+}
+
+#page a{
+	border:1px solid #ff9600;
+	text-decoration:none;
+	padding:5px 7px;
+	color:#ff6500;
+}
+
+#page .invalid{
+	border:1px solid #ffe3c6;
+	color:#ffe3c6;
+}
+
+#page a:hover,#page .current{
+	border:1px solid #ff6500;
+	background-color:#ffbe94;
+}

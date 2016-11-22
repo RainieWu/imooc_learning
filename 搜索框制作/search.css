@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+	background:url(images/IMG_20150620_192659.jpg) no-repeat fixed bottom;
+	background-size:1366px;
+	font-family:Microsoft YaHei;
+	font-size:14px;
+}
+
+form{
+	background:#FFF;
+	width:334px;
+	position:absolute;
+	left:50%;
+	margin-left:-167px;
+	text-align:center;
+	margin-top:200px;
+}
+
+#text{
+	background:#FFF;
+	border:none;
+	float:left;
+	width:300px;
+	height:30px;
+	outline:none;
+	margin-left:4px;
+}
+
+#submit{
+	border:none;
+	background:url(images/loop.png);
+	width:24px;
+	height:24px;
+	margin:3px;
+	cursor:pointer;
+	float:left;
+	outline:none;
+}
+
+#result{
+	display:none;
+	width:334px;
+	position:absolute;
+	left:50%;
+	margin-left:-167px;
+	margin-top:231px;
+}
+
+#result ul li{
+	display:block;
+	background:#FFF;
+	height:26px;
+	padding-top:4px;
+	padding-left:4px;
+	cursor:pointer;
+}
+
+#result ul li:hover{
+	background:#CCC;
+}

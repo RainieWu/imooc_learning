@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DOM对象</title>
+<script language="javascript" type="text/javascript">
+	window.onload = function(){
+		var node=document.getElementsByTagName("tr");
+		for(var i=0;i<node.length;i++) changeBC(node[i]);
+	}
+	function changeBC(object){
+		object.onmouseover=function(){
+			object.style.backgroundColor="#f2f2f2";
+        }
+        object.onmouseout=function(){
+            object.style.backgroundColor="#fff";
+        }
+	}
+	function add(){
+		var node=document.getElementsByTagName("tr");
+		var num=node.length;
+        var tr=document.createElement("tr");
+        var td1=document.createElement("td");
+        var td2=document.createElement("td");
+        td1.innerHTML="xh00"+num;
+        td2.innerHTML="学生"+num;
+        var deletelink=document.createElement("td");
+        deletelink.innerHTML="<a href='javascript:;' onclick='deleletext(this)'>删除</a>";
+        var table=document.getElementById("table");
+        table.appendChild(tr);
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(deletelink);
+		var node=document.getElementsByTagName("tr");
+		for(var i=0;i<node.length;i++) changeBC(node[i]);
+	}
+	function deletetext(object){
+		var x=object.parentNode.parentNode;
+		x.parentNode.removeChild(x);
+	}
+</script> 
+</head>
+
+<body>
+	<table border="1" width="50%" id="table">
+    	<tr>
+			<th>学号</th>
+			<th>姓名</th>
+			<th>操作</th>
+        </tr>
+        <tr>
+			<td>xh001</td>
+			<td>王小明</td>
+			<td><a href="javascript:;" onclick="deleletext(this)">删除</a></td>
+        </tr>
+	   	<tr>
+			<td>xh002</td>
+			<td>刘小芳</td>
+			<td><a href="javascript:;" onclick="deletetext(this)">删除</a></td>
+        </tr>
+    </table>
+    <input type="button" value="添加一行" onclick="add()" />   <!--在添加按钮上添加点击事件  -->
+ </body>
+</html>

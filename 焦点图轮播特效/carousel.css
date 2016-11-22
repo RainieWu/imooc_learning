@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+}
+
+#frame{
+	margin:auto;
+	width:960px;
+}
+
+#main{
+}
+
+#carousel{
+	width:960px;
+	height:420px;
+	position:relative;
+	overflow:hidden;
+}
+
+#pic{
+	width:5760px;
+	height:420px;
+	position:absolute;
+	left:-960px;
+	z-index:1;
+}
+
+#pic img{
+	margin-right:-8px;
+}
+
+#left{
+	z-index:2;
+	opacity:0.3;
+	position:absolute;
+	top:180px;
+	left:0;
+	cursor:pointer;
+	display:none;
+}
+
+#right{
+	z-index:2;
+	opacity:0.3;
+	position:absolute;
+	top:180px;
+	right:0;
+	cursor:pointer;
+	display:none;
+}
+
+#spot{
+	position:absolute;
+	bottom:10px;
+	left:438px;
+	z-index:2;
+}
+
+#spot img{
+	opacity:0.5;
+	cursor:pointer;
+}
+
+#spot .active{
+	opacity:1;
+}

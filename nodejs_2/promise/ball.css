@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+}
+
+.ball{
+	position:relative;
+	left:0px;
+	width:40px;
+	height:40px;
+	border-radius:20px;
+}
+
+#ball1{
+	background-color:#F00;
+}
+
+#ball2{
+	background-color:#FF0;
+}
+
+#ball3{
+	background-color:#0F0;
+}
