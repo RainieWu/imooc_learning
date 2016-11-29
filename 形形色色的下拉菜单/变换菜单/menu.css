@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+	font-size:12px;
+	font-family:Tahoma;
+}
+
+ul{
+	list-style:none;
+}
+
+ul li{
+	float:left;
+}
+
+ul li a{
+	display:block;
+	text-decoration:none;
+	color:#000;
+	line-height:40px;
+	text-align:center;
+	padding:0 10px;
+	height:80px;
+}
+
+ul li a:hover{
+	margin-top:-40px;
+	background-color:#333;
+	color:#FFF;
+}
+
+ul li a span{
+	display:none;
+}
+
+ul li a:hover span{
+	display:block;
+}
+
+#menu{
+	background-color:#eee;
+	width:600px;
+	height:40px;
+	margin:auto;
+	border-bottom:5px solid #333;
+}
