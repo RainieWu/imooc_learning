@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvas绘图详解</title>
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+}
+h1{
+	color:#FFF;
+	font-weight:bold;
+	font-family:Tahoma;
+}
+a{
+	text-decoration:none;
+}
+#canvasWrapper{
+	position:relative;
+}
+canvas{
+	border:1px solid #000;
+	margin:10px auto;
+	display:block;
+}
+#controller{
+	position:absolute;
+	top:0px;
+	left:17px;
+	background-color:#CCC;
+	border:1px solid #000;
+	padding-left:5px;
+	padding-right:5px;
+}
+#controller #canvasButton{
+	display:block;
+	background-color:#999;
+	color:#FFF;
+	text-align:center;
+	font-weight:bold;
+	font-family:Tahoma;
+	font-size:12px;
+	padding:5px;
+	border-radius:6px;
+	margin:10px 10px;
+}
+#controller #canvasButton:hover{
+	background-color:#666;
+}
+#controller .colorButton{
+	display:inline-block;
+	padding:2px;
+	border-radius:6px;
+	margin:4px;
+	margin-bottom:10px;
+}
+#controller #whiteButton{
+	background-color:#FFF;
+}
+#controller #blackButton{
+	background-color:#000;
+}
+</style>
+</head>
+
+<body>
+	<div id="canvasWrapper">
+    	<canvas id="canvas"></canvas>
+        <div id="controller">
+            <a href="#" id="canvasButton">STOP</a>
+            <a href="#" class="colorButton" id="whiteButton">&nbsp;</a>
+            <a href="#" class="colorButton" id="blackButton">&nbsp;</a>
+        </div>
+    </div>
+</body>
+<script src="ball.js" language="javascript" type="text/javascript"></script>
+</html>
