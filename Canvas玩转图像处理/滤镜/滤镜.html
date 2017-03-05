@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>滤镜</title>
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background-color:#000;
+}
+canvas{
+	border:1px solid #333;
+	margin:10px;
+	display:inline-block
+	margin:auto;
+}
+a{
+	display:inline-block;
+	text-align:center;
+	color:#CCC;
+}
+#filter{
+	text-align:center;
+}
+</style>
+</head>
+
+<body>
+	<div>
+		<canvas id="canvas1"></canvas>
+		<canvas id="canvas2"></canvas>
+    </div>
+    <div id="filter">
+    	<a href="javascript:grayscale()">灰度</a>
+    	<a href="javascript:blackandwhite()">黑白</a>
+    	<a href="javascript:inversion()">反色</a>
+    	<a href="javascript:blurFliter()">模糊</a>
+    	<a href="javascript:mosaic()">马赛克</a>
+    </div>
+</body>
+<script src="canvas.js" language="javascript" type="text/javascript"></script>
+</html>
