@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>移动端的WEB相册</title>
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+<link href="css/album.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<ul id="album">
+    	<li data-id="1" class="animated bounceIn"><img src="images/1.jpg"></li>
+    	<li data-id="2" class="animated bounceIn"><img src="images/2.jpg"></li>
+    	<li data-id="3" class="animated bounceIn"><img src="images/3.jpg"></li>
+    	<li data-id="4" class="animated bounceIn"><img src="images/4.jpg"></li>
+    	<li data-id="5" class="animated bounceIn"><img src="images/5.jpg"></li>
+    	<li data-id="6" class="animated bounceIn"><img src="images/6.jpg"></li>
+    	<li data-id="7" class="animated bounceIn"><img src="images/7.jpg"></li>
+    	<li data-id="8" class="animated bounceIn"><img src="images/8.jpg"></li>
+    	<li data-id="9" class="animated bounceIn"><img src="images/9.jpg"></li>
+    	<li data-id="10" class="animated bounceIn"><img src="images/10.jpg"></li>
+    </ul>
+    <div id="largeBox" class="animated fadeIn">
+    	<img id="largeImage">
+    </div>
+    <div id="mask"></div>
+    <div id="popup">
+    	<p id="title">提示</p>
+        <div id="contain">
+        	<p id="text"></p>
+            <button id="confirm" onClick="javascrip:closePopup()">确定</button>
+        </div>
+    </div>
+</body>
+<script src="js/zepto.js" language="javascript" type="text/javascript"></script>
+<script src="js/touch.js" language="javascript" type="text/javascript"></script>
+<script src="js/album.js" language="javascript" type="text/javascript"></script>
+</html>
