@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+.wrapper{
+	width:250px;
+	padding:20px;
+	margin:auto;
+}
+
+h2{
+	text-align:center;
+}
+
+button{
+	margin-top:20px;
+}
+
+.error{
+	color:#F00;
+	margin-top:-10px;
+	font-size:10px;
+	float:right;
+}
+
+.form-group{
+	position:relative;
+}
+
+i{
+	position:absolute;
+	top:33px;
+	right:8px;
+}
